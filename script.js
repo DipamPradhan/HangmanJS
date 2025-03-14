@@ -96,6 +96,9 @@ function gameOver(gameState,answerVal){
         buttons.forEach(button => {
             button.disabled = true;
         });
+        wrongGuessCount = 0;
+        correctWord = [];
+
     }else{
         incorrectAnswer.style.display="flex";
         overlay.classList.add("blur-background");
@@ -106,6 +109,10 @@ function gameOver(gameState,answerVal){
         buttons.forEach(button => {
             button.disabled = true;
         });
+
+        wrongGuessCount = 0;
+        correctWord = [];
+
     }
 }
 
@@ -125,6 +132,8 @@ playAgainW.addEventListener("click",function(e){
         button.classList.remove("correct");
         button.classList.remove("incorrect");
     });
+        incorrectVal.innerText = `: ${wrongGuessCount}/${maxGuess}`
+        hangmanImgVal.src = `./images/hangman-${wrongGuessCount}.svg`
 });
 
 playAgainL.addEventListener("click",function(e){
@@ -143,4 +152,6 @@ playAgainL.addEventListener("click",function(e){
         button.classList.remove("correct");
         button.classList.remove("incorrect");
     });
+            incorrectVal.innerText = `: ${wrongGuessCount}/${maxGuess}`
+        hangmanImgVal.src = `./images/hangman-${wrongGuessCount}.svg`
 });
