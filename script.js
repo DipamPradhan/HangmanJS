@@ -40,6 +40,11 @@ generateWord.addEventListener("click",function(e){
         button.classList.remove("correct");
         button.classList.remove("incorrect");
     });
+    
+    wrongGuessCount = 0;
+    correctWord = [];
+              incorrectVal.innerText = `: ${wrongGuessCount}/${maxGuess}`
+        hangmanImgVal.src = `./images/hangman-${wrongGuessCount}.svg`
 });
     
 document.addEventListener("keypress", function(e) {
