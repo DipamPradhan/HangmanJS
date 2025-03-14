@@ -1,0 +1,22 @@
+hangman_words = [
+{"word": "gomu gomu nomi", "hint": "The original name of Luffy's Devil Fruit"},
+{"word": "hito hito nomi", "hint": "Chopper's Devil Fruit that lets him talk and transform(Japanese)"},
+{"word": "wano kuni", "hint": "A closed-off country ruled by the Beasts Pirates"},
+{"word": "poneglyph", "hint": "Ancient stone tablets with historical secrets"},
+{"word": "pluton", "hint": "One of the Ancient Weapons, a battleship"},
+{"word": "laug htale", "hint": "The final island where One Piece is located"},
+{"word": "dark king rayleigh", "hint": "Roger’s right-hand man and a legendary Haki user"},
+{"word": "Conqueror haki", "hint": "A rare type of Haki that can knock out weak-willed opponents in English"},
+{"word": "god valley incident", "hint": "A legendary event where Garp and Roger fought together"},
+{"word": "world noble", "hint": "Descendants of the founders of the World Government"},
+{"word": "water seven", "hint": "A city famous for its shipwrights and Aqua Laguna"},
+{"word": "thriller bark", "hint": "A massive haunted ship ruled by Moria"},
+{"word": "skypiea", "hint": "An island in the sky where Enel ruled"},
+{"word": "gear fifth", "hint": "Luffy’s most powerful transformation"},
+{"word": "davy back fight", "hint": "A pirate game where crews can steal each other’s members"},
+{"word": "road poneglyph", "hint": "A special red stone that leads to Laugh Tale"},
+{"word": "baratie", "hint": "The floating restaurant where Sanji used to work"},
+{"word": "reverie", "hint": "A world meeting where kings and queens gather"},
+{"word": "kozuki oden", "hint": "The samurai who sailed with Roger and Whitebeard"},
+{"word": "drum island", "hint": "The snowy island where Chopper was born"}
+];
