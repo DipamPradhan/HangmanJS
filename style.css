@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, #fff7ad, #ffa9f9);
+}
+
+h1{
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 60px;
+}
+
+.upperContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.container .contents{
+    float: left;
+    width: 40%;
+    margin: 10px 0px 0px 50px;
+}
+
+.upperContainer .word{
+    float: left;
+    width: 40%;
+    margin: 10px 0px 0px 600px;
+}
+.upperContainer .word ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+.upperContainer .word ul li{
+    border-bottom: 6px solid black;
+    width: 45px;
+    height: 60px;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.upperContainer .word ul li.guessed{
+    border-bottom:none;
+}
+
+
+.container .keyboard{
+    float: left;
+    width: 60%;
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    /* border: 4px solid black; */
+    padding: 20px 10px 20px 10px;
+    margin-right: 20px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #fff8bc, #f5b7f1);
+}
+
+
+
+.keyboard button{
+    width: calc(100%/ 9 - 5px);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #8d54ff;
+    color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.keyboard button:hover{
+    background-color: #bc9aff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: rgb(0, 0, 0);
+}
+
+.keyboard button.choosed.incorrect{
+    background-color: #bc9aff;
+    cursor: not-allowed;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: rgb(169, 62, 62);
+}
+.keyboard button.choosed.correct{
+    background-color: #bc9aff;
+    cursor: not-allowed;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: rgb(90, 115, 52);
+}
+
+.contents .incorrectGuess{
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.generate{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+.generate button{
+    font-family: "Rowdies", sans-serif;
+    font-weight: 500;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border: 4px solid black;
+    background-color: #8d54ff;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+}
+
+.generate button:hover{
+    background-color: #bc9aff;
+    color: black;
+    transform: scale(1.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    transition: transform 0.3s ease;
+}
+
+.generate button.notClicked{
+    box-shadow: 0 0 10px red;
+    animation: movingLine 0.2s linear infinite, glowEffect 2s infinite;
+
+}
+
+@keyframes movingLine {
+    0% {
+        border-top: 5px solid black;
+    }
+    25% {
+        border-right: 5px solid black;
+    }
+    50% {
+        border-bottom: 5px solid black;
+    }
+    75% {
+        border-left: 5px solid black;
+    }
+
+}
+
+@keyframes glowEffect {
+    0% {
+        box-shadow: 0 0 15px red;
+    }
+    50% {
+        box-shadow: 0 0 25px red, 0 0 35px red;
+    }
+    100% {
+        box-shadow: 0 0 15px red;
+    }
+}
+
+.contents .hint{
+    font-family: "Rowdies", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+margin-top: 20px;
+    font-size: 30px;
+    /* display: inline; */
+}
+
+#guess{
+    color: red;
+}
+
+.hangmanImage{
+
+    margin-left: 50px;
+}
+
+.notGenerated {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    font-family: "Rowdies", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10; 
+}
+
+
+.blur-background {
+    filter: blur(5px);
+    transition: filter 0.7s ease,fade-out 0.7s ease;
+}
+
+.notGenerated.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.answer{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    font-family: "Rowdies", sans-serif;
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10; 
+}
+
+.answer img{
+    width: 100%;
+    height: 400px;
+}
+
+.playAgain{
+    height: fit-content;
+    width: fit-content;
+    margin-top: 30px;
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+    font-family: "Rowdies", sans-serif;
+    cursor: pointer;
+    background: linear-gradient(90deg, #fff7ad, #ffa9f9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.playAgain:hover{
+    transform: scale(1.1);
+}
