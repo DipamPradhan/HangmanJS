@@ -50,7 +50,7 @@ hangman_words = [
     {"word": "lantern", "hint": "A portable light source"},
     {"word": "whirlpool", "hint": "A swirling body of water"},
     {"word": "gomugomunomi", "hint": "The original name of Luffy's Devil Fruit"},
-    {"word": "hitohitonomi", "hint": "Chopper's Devil Fruit that lets him talk and transform"},
+    {"word": "hitohitonomi", "hint": "Chopper's Devil Fruit that lets him talk and transform(Japanese)"},
     {"word": "wanokuni", "hint": "A closed-off country ruled by the Beasts Pirates"},
     {"word": "poneglyph", "hint": "Ancient stone tablets with historical secrets"},
     {"word": "pluton", "hint": "One of the Ancient Weapons, a battleship"},
