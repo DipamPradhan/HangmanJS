@@ -154,6 +154,7 @@ document.addEventListener("keydown",function(e){
     if(e.key==="Enter"){
         playAgainW.click();
         playAgainL.click();
+        generateWord.click();
     }
 })
 
