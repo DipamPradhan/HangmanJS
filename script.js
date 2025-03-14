@@ -43,11 +43,25 @@ generateWord.addEventListener("click",function(e){
     });
 });
     
+document.addEventListener("keypress", function(e) {
+    const currentLetter = e.key.toLowerCase(); 
+    if (currentLetter >= 'a' && currentLetter <= 'z' && generated) {
+        const button = keyboard.querySelector(`button[data-letter="${currentLetter}"]`);
+        if (button && !button.disabled) {
+            button.click();
+        }
+    } else if (!generated) {
+        notGenerated.style.display = "flex";
+        overlay.classList.add("blur-background");
+        generateWord.classList.add("notClicked");
+    }
+});
 
 for(let i=97;i<=122;i++){
     const button = document.createElement("button");
     let currentLetter = String.fromCharCode(i);
     button.textContent = currentLetter;
+    button.setAttribute("data-letter", currentLetter);
     keyboard.appendChild(button);
    
     button.addEventListener("click",function(e){
@@ -135,6 +149,13 @@ playAgainW.addEventListener("click",function(e){
         incorrectVal.innerText = `: ${wrongGuessCount}/${maxGuess}`
         hangmanImgVal.src = `./images/hangman-${wrongGuessCount}.svg`
 });
+
+document.addEventListener("keydown",function(e){
+    if(e.key==="Enter"){
+        playAgainW.click();
+        playAgainL.click();
+    }
+})
 
 playAgainL.addEventListener("click",function(e){
     generated = true;   
