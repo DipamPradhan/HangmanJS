@@ -21,7 +21,6 @@ const maxGuess = 6;
 const gameState = false;
 function getRandomWord(){
     const{word,hint} = hangman_words[Math.floor(Math.random()*hangman_words.length)];
-    console.log(word,hint);
     currentWord = word;
     hintVal.textContent = `Hint: ${hint}`; 
     wordVal.innerHTML = word.split("").map(()=>'<li></li>').join("");
