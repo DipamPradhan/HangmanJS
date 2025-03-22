@@ -5,6 +5,7 @@
 }
 
 body{
+    /* background: linear-gradient(90deg, #f5b7f1, #ffa9f9); */
     background: linear-gradient(90deg, #fff7ad, #ffa9f9);
 }
 
@@ -21,6 +22,7 @@ h1{
     flex-direction: row;
     align-items: center;
     margin-top: 50px;
+    position: relative;
 }
 
 .container{
@@ -37,7 +39,9 @@ h1{
 .upperContainer .word{
     float: left;
     width: 40%;
-    margin: 10px 0px 0px 360px;
+    margin: 10px 0px 0px 49px;
+    position: absolute;
+    right: 100px;
 }
 .upperContainer .word ul{
     list-style-type: none;
@@ -65,6 +69,7 @@ h1{
 }
 
 
+
 .container .keyboard{
     float: left;
     width: 60%;
@@ -75,7 +80,6 @@ h1{
     justify-content: center;
     height: fit-content;
     width: fit-content;
-    /* border: 4px solid black; */
     padding: 20px 10px 20px 10px;
     margin-top: -60px;
     margin-right: 20px;
@@ -204,7 +208,7 @@ h1{
 
 .contents .hint{
     font-family: "Rowdies", sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
 margin-top: 20px;
     font-size: 25px;
@@ -294,6 +298,189 @@ margin-top: 20px;
     transition: transform 0.3s ease;
 }
 
+
+.contents .incorrectGuess, .contents .hint {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 20px;
+    /* text-align: center; */
+    position: relative;
+    z-index: 5;
+}
+
 .playAgain:hover{
     transform: scale(1.1);
 }
+@media (max-width: 1262px) {
+    h1 {
+        font-size: 50px;
+    }
+    #hangmanImage{
+        height: 200px;
+        width: 200px;   
+    }
+    .upperContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        /* width: 100%; */
+    }
+    .contents .hint {
+        font-family: "Rowdies", sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        margin-top: 20px;
+        /* text-align: center; */
+        position: relative;
+        z-index: 5;
+    }
+    
+    .upperContainer .word {
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        /* max-width: 600px; */
+        align-content: center;
+        position: relative;
+        text-align: center;
+        left: 0px;
+    }
+    
+    .upperContainer .word ul {
+        /* flex-wrap: wrap; */
+        /* gap: 10px; */
+        padding: 0;
+        /* width: 100%; */
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        position: relative;
+    }
+    
+    .contents {
+        text-align: center;
+        max-width: 90%;
+        position: relative;
+        z-index: 5;
+    }
+    .container .keyboard{
+        /* float: left; */
+        width: 60%;
+        /* margin-left: 50px; */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+        height: fit-content;
+        width: fit-content;
+        padding: 20px 10px 20px 10px;
+        margin-top: 30px;
+        /* margin-right: 20px; */
+        border-radius: 30px;
+        background: linear-gradient(90deg, #fff8bc, #f5b7f1);
+    }
+    
+    
+    
+    .keyboard button{
+        width: calc(100%/ 14 - 5px);
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        height: 43px;
+        font-size: 12px;
+        text-transform: uppercase;
+        background-color: #8d54ff;
+        color: white;
+        border: 3px solid black;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    
+
+}
+
+@media (max-width: 927px){
+    h1{
+        font-size: 30px;
+    }
+    .contents .incorrectGuess{
+        font-family: "Rowdies", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .generate button{
+        font-family: "Rowdies", sans-serif;
+        font-weight: 300;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        border: 4px solid black;
+        background-color: #8d54ff;
+        color: white;
+        border-radius: 20px;
+        padding: 10px 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .answer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 820px){
+    .contents .hint {
+        font-family: "Rowdies", sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        margin-top: 20px;
+        /* text-align: center; */
+        position: relative;
+        z-index: 5;
+    }
+    
+}
+
+
+
+/* @media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    .upperContainer .word ul {
+        gap: 5px;
+    }
+    .upperContainer .word ul li {
+        min-width: 35px;
+        height: 50px;
+        font-size: 30px;
+    }
+    .keyboard button {
+        width: 35px;
+        height: 45px;
+        font-size: 12px;
+    }
+    .contents {
+        z-index: 10;
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+} */

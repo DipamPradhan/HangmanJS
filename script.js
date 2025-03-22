@@ -178,6 +178,6 @@ playAgainL.addEventListener("click",function(e){
         button.classList.remove("correct");
         button.classList.remove("incorrect");
     });
-            incorrectVal.innerText = `: ${wrongGuessCount}/${maxGuess}`
+        incorrectVal.innerText = `: ${wrongGuessCount}/${maxGuess}`
         hangmanImgVal.src = `./images/hangman-${wrongGuessCount}.svg`
 });

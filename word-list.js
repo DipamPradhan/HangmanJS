@@ -49,4 +49,7 @@ hangman_words = [
     {"word": "boomerang", "hint": "An Australian throwing tool that returns"},
     {"word": "lantern", "hint": "A portable light source"},
     {"word": "whirlpool", "hint": "A swirling body of water"},
+    {"word": "gomugomunomi", "hint": "The original name of Luffy's Devil Fruit"},
+
+    // {"word":"apekshya   ","hint":"sani sani hissa pareki"}
 ]
