@@ -96,6 +96,7 @@ h1{
     font-style: normal;
     height: 50px;
     font-size: 15px;
+    flex-basis: 40px;
     text-transform: uppercase;
     background-color: #8d54ff;
     color: white;
