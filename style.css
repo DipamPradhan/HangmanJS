@@ -337,7 +337,7 @@ h1 {
 
 .hangmanImage {
   position: absolute;
-  left: -40px;
+  left: -90px;
   top: 13px;
   width: 320px;
   display: flex;
