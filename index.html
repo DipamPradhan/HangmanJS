@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HANGMAN</title>
+    <title>ONE PIECE HANGMAN</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Rowdies:wght@300;400;700&family=Rubik+Mono+One&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Rock+Salt&family=Rowdies:wght@300;400;700&family=Rubik+Mono+One&display=swap"
     rel="stylesheet"
   />
   <link
@@ -26,9 +26,27 @@
   />
   <link rel="mask-icon" href="./images/logoFinal2.png" color="#4deeea" />
   <body>
+    <div class="bg-art" aria-hidden="true">
+      <img
+        src="./onepiece-images/crew on luffy.png"
+        alt=""
+        class="bg-art-img bg-art-left"
+      />
+
+      <img
+        src="./onepiece-images/shipp.png"
+        alt=""
+        class="bg-art-img bg-art-bottom"
+      />
+    </div>
     <div id="overlay">
       <div class="header">
-        <h1>HANGMAN</h1>
+        <img
+          src="./onepiece-images/logo.png"
+          alt="One Piece logo"
+          class="title-logo"
+        />
+        <h1>ONE PIECE HANGMAN</h1>
       </div>
 
       <div class="upperContainer">
@@ -63,23 +81,21 @@
       </button>
     </div>
     <div class="notGenerated" id="notGenerated">
-      <h2>Click on Generate Word to start the game</h2>
+      <h2>Set sail! Click on Generate Word to start the game</h2>
     </div>
     <div class="answer" id="correctAnswer">
-      <img src="./images/cat-hat-off.gif" alt="congratsGif" />
-      <h2>Congratulations!</h2>
+      <h2>Congratulations, Straw Hat!</h2>
       <h2>You have guessed the correct word</h2>
-      <h2 style="color: green">
+      <h2 style="color: #2e9e44">
         Answer:
         <span id="answerW" style="text-transform: uppercase"></span>
       </h2>
       <button id="playAgainW" class="playAgain">Play Again</button>
     </div>
     <div class="answer" id="incorrectAnswer">
-      <img src="./images/cat-fail.gif" alt="failGif" />
-      <h2>Try Again!</h2>
+      <h2>Try Again, Captain!</h2>
       <h2>You couldn't guess the correct word</h2>
-      <h2 style="color: red">
+      <h2 style="color: #e63946">
         Answer:
         <span id="answerL" style="text-transform: uppercase"></span>
       </h2>
