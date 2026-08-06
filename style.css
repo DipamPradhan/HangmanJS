@@ -51,6 +51,28 @@ body {
   z-index: 0;
 }
 
+@media (min-width: 601px) {
+  .left-luffy {
+    display: none;
+  }
+
+  .bg-art-cloud {
+    right: 300px;
+    bottom: 0px;
+    width: clamp(300px, 40vw, 500px);
+    opacity: 0.3;
+    z-index: 2;
+  }
+
+  .bg-art-gear {
+    right: 100px;
+    top: 360px;
+    width: clamp(300px, 40vw, 500px);
+    opacity: 0.2;
+    z-index: 2;
+  }
+}
+
 h1 {
   font-family: "Pirata One", cursive;
   font-weight: 400;
@@ -405,11 +427,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   background:
-    linear-gradient(
-      180deg,
-      rgba(255, 243, 205, 0.72),
-      rgba(255, 243, 205, 0.72)
-    ),
+    linear-gradient(180deg, rgba(255, 243, 205, 0.8), rgba(255, 243, 205, 0.8)),
     url("./onepiece-images/logo.png") center / contain no-repeat,
     #fff3cd;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
@@ -419,13 +437,15 @@ h1 {
 
 #incorrectAnswer {
   background:
-    linear-gradient(
-      180deg,
-      rgba(255, 243, 205, 0.72),
-      rgba(255, 243, 205, 0.72)
-    ),
+    linear-gradient(180deg, rgba(255, 243, 205, 0.8), rgba(255, 243, 205, 0.8)),
     url("./onepiece-images/buggy.png") center / contain no-repeat,
     #fff3cd;
+}
+
+#answerW,
+#answerL {
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 4px;
 }
 
 .playAgain {
@@ -623,15 +643,24 @@ h1 {
     overflow: visible;
   }
 
+  .bg-art-cloud,
+  .bg-art-gear {
+    display: none;
+  }
+
   #overlay {
     flex: 0 1 auto;
     padding: 12px 10px;
   }
 
+  .bg-art-left {
+    display: none;
+  }
+
   .left-luffy {
     position: fixed;
-    left: -120px;
-    bottom: 0;
+    left: -180px;
+    bottom: 100px;
     height: 85vh;
     width: auto;
     z-index: 0;
