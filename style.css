@@ -199,6 +199,7 @@ h1 {
 }
 
 .keyboard-row {
+  position: relative;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -254,6 +255,26 @@ h1 {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   color: #eaffea;
+}
+
+.keyboard-credit {
+  position: absolute;
+  bottom: 4px;
+  right: 12px;
+  font-family: "Pirata One", cursive;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #0b3d91;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 720px) {
+  .keyboard-credit {
+    display: none;
+  }
 }
 
 .contents .incorrectGuess {
@@ -873,3 +894,115 @@ h1 {
         border-radius: 10px;
     }
 } */
+
+.momo-wrap {
+  position: fixed;
+  bottom: 20px;
+  left: 40px;
+  z-index: 1000;
+  cursor: pointer;
+}
+.momo-img {
+  width: 70px;
+  height: 70px;
+  animation: momoBump 1.2s ease-in-out infinite;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+  transition: transform 0.2s;
+}
+.momo-wrap:hover .momo-img {
+  transform: scale(1.15);
+}
+@keyframes momoBump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.momo-tooltip {
+  position: absolute;
+  bottom: 78px;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: #fff3e0;
+  color: #4e342e;
+  font-family: "Rowdies", system-ui;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.momo-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #fff3e0;
+}
+.momo-wrap:hover .momo-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+#smokeCanvas {
+  position: absolute;
+  bottom: 40px;
+  left: -30px;
+  width: 140px;
+  height: 160px;
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .momo-wrap {
+    left: 12px;
+    bottom: 12px;
+  }
+  .momo-img {
+    width: 56px;
+    height: 56px;
+  }
+  .momo-tooltip {
+    bottom: 60px;
+    font-size: 0.72rem;
+    padding: 5px 10px;
+  }
+  #smokeCanvas {
+    bottom: 30px;
+    left: -34px;
+    width: 112px;
+    height: 128px;
+  }
+}
+
+@media (max-width: 400px) {
+  .momo-wrap {
+    left: 8px;
+    bottom: 8px;
+  }
+  .momo-img {
+    width: 46px;
+    height: 46px;
+  }
+  .momo-tooltip {
+    bottom: 52px;
+    max-width: 90vw;
+    white-space: normal;
+    text-align: center;
+  }
+  #smokeCanvas {
+    bottom: 24px;
+    left: -36px;
+    width: 96px;
+    height: 108px;
+  }
+}

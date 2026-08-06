@@ -122,6 +122,12 @@ keyboardRows.forEach(row => {
             if(correctWord.length===totalLetters) return gameOver(true,currentWord);
         });
     });
+    if (row === "zxcvbnm") {
+        const credit = document.createElement("span");
+        credit.className = "keyboard-credit";
+        credit.textContent = "Dipam Pradhan";
+        rowDiv.appendChild(credit);
+    }
     keyboard.appendChild(rowDiv);
 });
 
