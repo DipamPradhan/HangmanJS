@@ -10,7 +10,7 @@ Welcome to **One Piece Hangman**, a classic word guessing game with a full **One
 
 ## 🛠️ Tech Stack
 
-- **HTML** – Structure of the webpage
+- **HTML** – Structure of the webpage used
 - **CSS** – Styling and layout (Straw Hat theme, mobile responsive)
 - **JavaScript** – Game logic and interactivity
 
