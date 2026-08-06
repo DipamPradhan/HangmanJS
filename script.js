@@ -63,7 +63,7 @@ generateWord.addEventListener("click",function(e){
     wrongGuessCount = 0;
     correctWord = [];
               incorrectVal.innerText = `: ${wrongGuessCount}/${maxGuess}`
-        hangmanImgVal.src = `./images/hangman-${wrongGuessCount}.svg`
+        hangmanImgVal.src = `./onepiece-images/hangman${wrongGuessCount}.png`
 });
     
 document.addEventListener("keypress", function(e) {
@@ -115,7 +115,7 @@ keyboardRows.forEach(row => {
                 button.classList.add("incorrect");
                 if(wrongGuessCount<=maxGuess){
                 incorrectVal.innerText = `: ${wrongGuessCount}/${maxGuess}`
-                hangmanImgVal.src = `./images/hangman-${wrongGuessCount}.svg`    
+                hangmanImgVal.src = `./onepiece-images/hangman${wrongGuessCount}.png`    
                 } 
             }
             if(wrongGuessCount=== maxGuess) return gameOver(false,currentWord);
@@ -175,7 +175,7 @@ playAgainW.addEventListener("click",function(e){
         button.classList.remove("incorrect");
     });
         incorrectVal.innerText = `: ${wrongGuessCount}/${maxGuess}`
-        hangmanImgVal.src = `./images/hangman-${wrongGuessCount}.svg`
+        hangmanImgVal.src = `./onepiece-images/hangman${wrongGuessCount}.png`
 });
 
 document.addEventListener("keydown",function(e){
@@ -203,5 +203,5 @@ playAgainL.addEventListener("click",function(e){
         button.classList.remove("incorrect");
     });
         incorrectVal.innerText = `: ${wrongGuessCount}/${maxGuess}`
-        hangmanImgVal.src = `./images/hangman-${wrongGuessCount}.svg`
+        hangmanImgVal.src = `./onepiece-images/hangman${wrongGuessCount}.png`
 });
