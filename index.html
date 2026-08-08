@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ONE PIECE HANGMAN</title>
-    <link rel="stylesheet" href="./style.css?v=3" />
+    <link rel="stylesheet" href="./style.css?v=4" />
   </head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +21,7 @@
     rel="apple-touch-icon"
     sizes="180x180"
     href="./onepiece-images/logohead.png"
-  />
+  />  
   <link
     rel="icon"
     type="image/png"
@@ -101,10 +101,46 @@
       </div>
     </div>
     <div class="generate">
-      <button id="generateWord">
-        <i class="fa-solid fa-rotate"></i>
-        <span>Generate Word</span>
+      <div class="generate-row">
+        <button id="generateWord">
+          <i class="fa-solid fa-rotate"></i>
+          <span>Generate Word</span>
+        </button>
+        <span id="difficultyBadge" class="difficulty-badge">Level: Easy</span>
+      </div>
+      <button id="changeLevel">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Change Level</span>
       </button>
+    </div>
+    <div class="landing-page" id="landingPage">
+      <h2>Welcome, Pirate!</h2>
+      <div class="landing-info">
+        <p><i class="fa-solid fa-skull-crossbones"></i> Guess the hidden One Piece word letter by letter</p>
+        <p><i class="fa-solid fa-heart"></i> You have 6 lives — don't let the hangman win!</p>
+        <p><i class="fa-solid fa-lightbulb"></i> Use hints to help you guess the answer</p>
+        <p><i class="fa-solid fa-layer-group"></i> Choose your difficulty and set sail!</p>
+      </div>
+      <div class="landing-difficulties">
+        <span class="landing-diff easy">Easy</span>
+        <span class="landing-diff medium">Medium</span>
+        <span class="landing-diff hard">Hard</span>
+        <span class="landing-diff everything">Everything</span>
+      </div>
+      <button class="set-sail-btn" id="setSail">
+        <i class="fa-solid fa-ship"></i>
+        <span>Set Sail!</span>
+      </button>
+    </div>
+    <div class="difficulty-selector" id="difficultySelector">
+      <h2>Choose Your Difficulty</h2>
+      <p class="difficulty-description" id="difficultyDescription">Hover over a difficulty to learn more</p>
+      <div class="difficulty-buttons">
+        <button class="difficulty-btn easy" data-difficulty="easy">Easy</button>
+        <button class="difficulty-btn medium" data-difficulty="medium">Medium</button>
+        <button class="difficulty-btn hard" data-difficulty="hard">Hard</button>
+        <button class="difficulty-btn everything" data-difficulty="everything">Everything</button>
+      </div>
     </div>
     <div class="notGenerated" id="notGenerated">
       <h2>Set sail! Click on Generate Word to start the game</h2>
@@ -137,8 +173,7 @@
       /></a>
       <div class="momo-tooltip">Buy me momo</div>
     </div>
-    <script src="./word-list.js?v=3"></script>
-    <script src="./script.js?v=3"></script>
+    <script src="./script.js?v=4"></script>
     <script src="./momo.js"></script>
   </body>
 </html>

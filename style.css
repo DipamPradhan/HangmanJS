@@ -328,6 +328,268 @@ h1 {
   transition: transform 0.3s ease;
 }
 
+.generate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.generate-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#changeLevel {
+  background-color: #0b3d91;
+}
+
+#changeLevel:hover {
+  background-color: #1f6fb2;
+}
+
+.difficulty-badge {
+  display: inline-block;
+  font-family: "Pirata One", sans-serif;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  margin-left: 8px;
+  vertical-align: middle;
+  color: #fff3cd;
+  background-color: #0b3d91;
+  border: 2px solid #7a4b29;
+}
+
+.difficulty-badge.easy {
+  background-color: #2e9e44;
+}
+
+.difficulty-badge.medium {
+  background-color: #b8860b;
+}
+
+.difficulty-badge.hard {
+  background-color: #e63946;
+}
+
+.difficulty-badge.everything {
+  background-color: #1f6fb2;
+}
+
+.landing-page {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  border: 4px solid #7a4b29;
+  border-radius: 20px;
+  padding: 30px;
+  width: fit-content;
+  max-width: 500px;
+  margin: auto;
+  font-family: "Pirata One", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    linear-gradient(180deg, rgba(255, 243, 205, 0.95), rgba(255, 243, 205, 0.95)),
+    url("./onepiece-images/logo.png") center / contain no-repeat,
+    #fff3cd;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  color: #7a4b29;
+  text-align: center;
+}
+
+.landing-page h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #0b3d91;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.landing-info {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.landing-info p {
+  font-family: "Rowdies", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #7a4b29;
+}
+
+.landing-info i {
+  color: #e63946;
+  margin-right: 8px;
+  width: 20px;
+}
+
+.landing-difficulties {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.landing-diff {
+  font-family: "Pirata One", sans-serif;
+  font-size: 16px;
+  padding: 6px 14px;
+  border-radius: 10px;
+  color: #fff3cd;
+}
+
+.landing-diff.easy {
+  background-color: #2e9e44;
+}
+
+.landing-diff.medium {
+  background-color: #b8860b;
+}
+
+.landing-diff.hard {
+  background-color: #e63946;
+}
+
+.landing-diff.everything {
+  background-color: #1f6fb2;
+}
+
+.set-sail-btn {
+  font-family: "Pirata One", sans-serif;
+  font-size: 28px;
+  padding: 16px 48px;
+  border: 4px solid #7a4b29;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #ffd700;
+  background: linear-gradient(135deg, #e63946, #c62b3a);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.set-sail-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(135deg, #ffd700, #e63946);
+  color: #7a4b29;
+}
+
+.difficulty-selector {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  border: 4px solid #7a4b29;
+  border-radius: 20px;
+  padding: 30px;
+  width: fit-content;
+  margin: auto;
+  font-family: "Pirata One", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    linear-gradient(180deg, rgba(255, 243, 205, 0.9), rgba(255, 243, 205, 0.9)),
+    url("./onepiece-images/logo.png") center / contain no-repeat,
+    #fff3cd;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  color: #7a4b29;
+}
+
+.difficulty-selector h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: #0b3d91;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.difficulty-description {
+  font-family: "Rowdies", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #7a4b29;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background-color: rgba(255, 215, 0, 0.2);
+  min-height: 20px;
+  text-align: center;
+  border: 2px solid rgba(122, 75, 41, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.difficulty-description.easy {
+  background-color: rgba(46, 158, 68, 0.2);
+  border-color: rgba(46, 158, 68, 0.4);
+}
+
+.difficulty-description.medium {
+  background-color: rgba(184, 134, 11, 0.2);
+  border-color: rgba(184, 134, 11, 0.4);
+}
+
+.difficulty-description.hard {
+  background-color: rgba(230, 57, 70, 0.2);
+  border-color: rgba(230, 57, 70, 0.4);
+}
+
+.difficulty-description.everything {
+  background-color: rgba(31, 111, 178, 0.2);
+  border-color: rgba(31, 111, 178, 0.4);
+}
+
+.difficulty-btn {
+  font-family: "Pirata One", sans-serif;
+  font-size: 22px;
+  padding: 14px 28px;
+  border: 3px solid #7a4b29;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff3cd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 140px;
+}
+
+.difficulty-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.difficulty-btn.easy {
+  background-color: #2e9e44;
+}
+
+.difficulty-btn.medium {
+  background-color: #b8860b;
+}
+
+.difficulty-btn.hard {
+  background-color: #e63946;
+}
+
+.difficulty-btn.everything {
+  background-color: #1f6fb2;
+}
+
 .generate button.notClicked {
   box-shadow: 0 0 10px red;
   animation:
@@ -822,6 +1084,72 @@ h1 {
   .playAgain {
     font-size: 18px;
     margin-top: 20px;
+  }
+
+  .landing-page {
+    width: 92vw;
+    max-width: 420px;
+    padding: 20px;
+  }
+
+  .landing-page h2 {
+    font-size: 28px;
+  }
+
+  .landing-info p {
+    font-size: 14px;
+  }
+
+  .landing-difficulties {
+    gap: 6px;
+  }
+
+  .landing-diff {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .set-sail-btn {
+    font-size: 22px;
+    padding: 12px 36px;
+  }
+
+  .difficulty-selector {
+    width: 92vw;
+    max-width: 420px;
+    padding: 20px;
+  }
+
+  .difficulty-selector h2 {
+    font-size: 24px;
+  }
+
+  .difficulty-buttons {
+    gap: 10px;
+  }
+
+  .difficulty-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    min-width: 100px;
+  }
+
+  .difficulty-description {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  .difficulty-badge {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  .generate-row {
+    gap: 4px;
+  }
+
+  .generate {
+    gap: 4px;
   }
 }
 
