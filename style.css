@@ -1097,7 +1097,8 @@ h1 {
   }
 
   .landing-info p {
-    font-size: 14px;
+    font-size: clamp(10px, 3vw, 14px);
+    white-space: nowrap;
   }
 
   .landing-difficulties {
@@ -1154,6 +1155,10 @@ h1 {
 }
 
 @media (max-width: 380px) {
+  .landing-info p {
+    font-size: 10px;
+  }
+
   .hangmanImage {
     width: 160px;
   }
